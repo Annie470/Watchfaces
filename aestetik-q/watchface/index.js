@@ -84,22 +84,20 @@ WatchFace({
       text: ''
     })
 
-    // orario — centro y=225, bounds stretti (glow max 70px → ±35 + padding)
+    // orario — centro y=225, box alto 110 così il font non viene tagliato sul device
     const glows = GLOWS_LG.map(({ size, color }) =>
       createWidget(widget.TEXT, {
-        x: 0, y: 190, w: 390, h: 63,
+        x: 0, y: 170, w: 390, h: 110,
         color, text_size: size,
-        font: 'UnicaOne-Regular.ttf',
         align_h: align.CENTER_H, align_v: align.CENTER_V,
-        text: '--:--'
+        text: ''
       })
     )
     const ora = createWidget(widget.TEXT, {
-      x: 0, y: 190, w: 390, h: 70,
+      x: 0, y: 170, w: 390, h: 110,
       color: 0xFFFFFF, text_size: 64,
-      font: 'UnicaOne-Regular.ttf',
       align_h: align.CENTER_H, align_v: align.CENTER_V,
-      text: '--:--'
+      text: ''
     })
 
     // data — centro y=285
@@ -125,7 +123,6 @@ WatchFace({
       createWidget(widget.TEXT, {
         x: 0, y: 372, w: 390, h: 18,
         color, text_size: size,
-        font: 'UnicaOne-Regular.ttf',
         align_h: align.CENTER_H, align_v: align.CENTER_V,
         text: ''
       })
@@ -133,7 +130,6 @@ WatchFace({
     const bpmTxt = createWidget(widget.TEXT, {
       x: 0, y: 372, w: 390, h: 18,
       color: 0xFFFFFF, text_size: 14,
-      font: 'UnicaOne-Regular.ttf',
       align_h: align.CENTER_H, align_v: align.CENTER_V,
       text: ''
     })
@@ -178,15 +174,16 @@ WatchFace({
     }
 
     const aggiornaBpm = () => {
-      const bpm = hr ? hr.getCurrent() : 0
+      let bpm = 0
+      try { bpm = hr ? hr.getCurrent() : 0 } catch (_) {}
       const t = bpm > 0 ? `${bpm}` : '--'
       glowsBpm.forEach(g => g.setProperty(prop.TEXT, t))
       bpmTxt.setProperty(prop.TEXT, t)
     }
 
     aggiorna()
-    aggiornaBpm()
     time.onPerMinute(aggiorna)
+    aggiornaBpm()
 
     if (hr) {
       try { hr.onCurrentChange(aggiornaBpm) } catch(_) {}

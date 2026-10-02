@@ -1,15 +1,15 @@
 {
   "configVersion": "v2",
   "app": {
-    "appId": 1129721,
-    "appName": "cyber-minimal",
+    "appId": 1129738,
+    "appName": "win98-wf",
     "appType": "watchface",
     "version": {
-      "code": 2,
-      "name": "1.1"
+      "code": 1,
+      "name": "1.0"
     },
     "vender": "zepp",
-    "description": "Neon pink glow watchface for Amazfit Active",
+    "description": "Win98 watchface for Amazfit Active",
     "icon": "icon.png"
   },
   "permissions": ["data:user.hd.heart_rate"],
@@ -45,7 +45,7 @@
   },
   "i18n": {
     "en-US": {
-      "appName": "cyber-minimal"
+      "appName": "win98-wf"
     }
   },
   "defaultLanguage": "en-US",
