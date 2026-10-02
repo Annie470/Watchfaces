@@ -1,0 +1,53 @@
+{
+  "configVersion": "v2",
+  "app": {
+    "appId": 1129721,
+    "appName": "cyber-minimal",
+    "appType": "watchface",
+    "version": {
+      "code": 1,
+      "name": "1.0"
+    },
+    "vender": "zepp",
+    "description": "Neon pink glow watchface for Amazfit Active",
+    "icon": "icon.png"
+  },
+  "permissions": ["data:user.hd.heart_rate"],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "3.0",
+      "target": "3.6",
+      "minVersion": "3.0"
+    }
+  },
+  "targets": {
+    "390x450-amazfit-active": {
+      "module": {
+        "watchface": {
+          "path": "watchface/index",
+          "main": 1,
+          "editable": 0,
+          "lockscreen": 1
+        }
+      },
+      "platforms": [
+        {
+          "name": "Amazfit Active",
+          "deviceSource": 8323328
+        },
+        {
+          "name": "Amazfit Active",
+          "deviceSource": 8323329
+        }
+      ],
+      "designWidth": 390
+    }
+  },
+  "i18n": {
+    "en-US": {
+      "appName": "cyber-minimal"
+    }
+  },
+  "defaultLanguage": "en-US",
+  "debug": false
+}
