@@ -48,7 +48,6 @@ WatchFace({
       createWidget(widget.TEXT, {
         x: 0, y: 38, w: 390, h: 18,
         color, text_size: size,
-        font: 'UnicaOne-Regular.ttf',
         align_h: align.CENTER_H, align_v: align.CENTER_V,
         text: ''
       })
@@ -56,7 +55,6 @@ WatchFace({
     const batTxt = createWidget(widget.TEXT, {
       x: 0, y: 38, w: 390, h: 18,
       color: 0xFFFFFF, text_size: 14,
-      font: 'UnicaOne-Regular.ttf',
       align_h: align.CENTER_H, align_v: align.CENTER_V,
       text: ''
     })
