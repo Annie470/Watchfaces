@@ -69,7 +69,6 @@ WatchFace({
       createWidget(widget.TEXT, {
         x: 0, y: 115, w: 390, h: 100,
         color, text_size: size,
-        font: 'UnicaOne-Regular.ttf',
         align_h: align.CENTER_H, align_v: align.CENTER_V,
         text: ''
       })
@@ -77,7 +76,6 @@ WatchFace({
     const giorno = createWidget(widget.TEXT, {
       x: 0, y: 115, w: 390, h: 100,
       color: 0xFFFFFF, text_size: 19,
-      font: 'UnicaOne-Regular.ttf',
       align_h: align.CENTER_H, align_v: align.CENTER_V,
       text: ''
     })
@@ -103,7 +101,6 @@ WatchFace({
       createWidget(widget.TEXT, {
         x: 0, y: 255, w: 390, h: 60,
         color, text_size: size,
-        font: 'UnicaOne-Regular.ttf',
         align_h: align.CENTER_H, align_v: align.CENTER_V,
         text: ''
       })
@@ -111,7 +108,6 @@ WatchFace({
     const data = createWidget(widget.TEXT, {
       x: 0, y: 255, w: 390, h: 60,
       color: 0xFFFFFF, text_size: 19,
-      font: 'UnicaOne-Regular.ttf',
       align_h: align.CENTER_H, align_v: align.CENTER_V,
       text: ''
     })
